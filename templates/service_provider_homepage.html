@@ -1,0 +1,53 @@
+<!-- templates/service_provider_homepage.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service Provider Dashboard</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background-color: #f2f2f2; }
+        .card { background: #fff; border-radius: 10px; padding: 20px; margin-bottom: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { color: #333; }
+        button { padding: 6px 12px; margin-right: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Welcome, {{ name }}</h1>
+    <div class="card">
+        <h2>Profile Summary</h2>
+        <p><strong>Email:</strong> {{ email }}</p>
+        <p><strong>Service:</strong> {{ service }}</p>
+    </div>
+
+    <div class="card">
+        <h2>Service Requests</h2>
+        {% if requests %}
+            {% for request in requests %}
+                <div style="margin-bottom: 10px;">
+                    <p><strong>From:</strong> {{ request.customer_name }}</p>
+                    <p><strong>Details:</strong> {{ request.details }}</p>
+                    <button>Accept</button>
+                    <button>Reject</button>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No service requests yet.</p>
+        {% endif %}
+    </div>
+
+    <div class="card">
+        <h2>Service History</h2>
+        <ul>
+            <li>12 Jun - Fixed geyser for Anjali - ⭐⭐⭐⭐☆</li>
+            <li>28 May - AC repair for Karan - ⭐⭐⭐⭐⭐</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Account Settings</h2>
+        <button>Edit Profile</button>
+        <button>Change Password</button>
+        <button>Logout</button>
+    </div>
+</body>
+</html>

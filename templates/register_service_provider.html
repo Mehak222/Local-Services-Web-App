@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register as Service Provider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Register as Service Provider</h2>
+    <form method="POST" action="/register_service_provider">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="text" name="phone" id="phone" required>
+
+        <label for="service">Service</label>
+        <select name="service" id="service" required>
+            <option value="">Select a service</option>
+            <option value="Plumber">Plumber</option>
+            <option value="Electrician">Electrician</option>
+            <option value="Home Cleaning">Home Cleaning</option>
+            <option value="Appliance Repair">Appliance Repair</option>
+            <option value="Beautician at Home">Beautician at Home</option>
+            <option value="Tutoring/Coaching">Tutoring/Coaching</option>
+            <option value="Laundry & Ironing">Laundry & Ironing</option>
+            <option value="AC Repair & Installation">AC Repair & Installation</option>
+        </select>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+</body>
+</html>

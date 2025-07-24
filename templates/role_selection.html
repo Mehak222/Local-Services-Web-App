@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Role</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .heading {
+            position: absolute;
+            top: 40px;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-top: 100px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .role-buttons {
+            display: flex;
+            gap: 40px;
+        }
+
+        .role-buttons a {
+            text-decoration: none;
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .role-buttons a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">Welcome to Local Service Platform</div>
+    <h2>Are you a Service Provider or a Customer?</h2>
+    <div class="role-buttons">
+        <a href="/register_service_provider">Service Provider</a>
+        <a href="/register_customer">Customer</a>
+    </div>
+</body>
+</html>

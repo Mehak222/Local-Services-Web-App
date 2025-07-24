@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Book a Service</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Book a Service</h2>
+    <form method="post">
+        <label>Your Name:</label>
+        <input type="text" name="customer" required>
+
+        <label>Service:</label>
+        <input type="text" name="service" required>
+
+        <label>Select Provider:</label>
+        <select name="provider_id" required>
+            {% for p in providers %}
+            <option value="{{ p[0] }}">{{ p[1] }} - {{ p[2] }}</option>
+            {% endfor %}
+        </select>
+
+        <label>Date:</label>
+        <input type="date" name="date" required>
+
+        <input type="submit" value="Book Service">
+    </form>
+
+    <a href="/">← Back to Home</a>
+</body>
+</html>
