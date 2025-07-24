@@ -149,5 +149,6 @@ def feedback():
 #     feedbacks = cur.execute("SELECT * FROM feedbacks").fetchall()
 #     return render_template("admin.html", providers=providers, bookings=bookings, feedbacks=feedbacks)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)
+
